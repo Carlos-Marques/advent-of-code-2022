@@ -17,6 +17,14 @@ path = "src/day_2/day_2.rs"
 name = "day_3"
 path = "src/day_3/day_3.rs"
 
+[[bin]]
+name = "day_4"
+path = "src/day_4/day_4.rs"
+
+[[bin]]
+name = "day_5"
+path = "src/day_5/day_5.rs"
+
 [dependencies]
 clap = { version = "4.4.6", features = ["derive"] }
 itertools = "0.11.0"
