@@ -20,7 +20,6 @@ fn main() {
     let input_path = opts.input;
     let file = File::open(&input_path).unwrap();
     let reader = io::BufReader::new(file);
-    // let priority = prioritize_repeated_items(reader);
 
     let priority = match opts.badge {
         false => prioritize_repeated_items(reader),
