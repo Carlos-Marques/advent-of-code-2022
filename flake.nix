@@ -1,14 +1,16 @@
 {
   description = "Nortech monorepo";
 
-  inputs.nixpkgs.url = "nixpkgs/nixos-unstable";
+  inputs = {
+    nixpkgs.url = "nixpkgs/nixos-unstable";
+  };
 
   outputs = { self, nixpkgs }: let
-
     makeDevShell = system: let
       pkgs = import nixpkgs { inherit system; };
       isDarwin = pkgs.stdenv.hostPlatform.isDarwin;
       darwinPackages = if isDarwin then [ ] else [ ];
+
     in
     pkgs.mkShell {
       buildInputs = [
