@@ -120,7 +120,6 @@ fn get_register_values<R: BufRead>(reader: R) -> impl Iterator<Item = (i32, usiz
 
 #[cfg(test)]
 mod tests {
-
     use super::*;
 
     #[test]
